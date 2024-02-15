@@ -30,7 +30,7 @@ const PostItem = ({
   };
 
   return (
-    <div className="border bg-slate-50 p-3 mb-5 transition duration-1000 ease-in">
+    <div className="md:max-w-[500px] border bg-slate-50 p-3 mb-5 transition duration-1000 ease-in">
       <div className="text-slate-500">{title}</div>
       <div className="h-[300px] flex items-center overflow-hidden">
         <img src={image} alt="post" />
@@ -72,7 +72,9 @@ const PostItem = ({
             comment
           </button>
         </form>
-        <h2 className="mt-3">{comments.length <= 0?"You have no Comments!":"All Comments"}</h2>
+        <h2 className="mt-3">
+          {comments.length <= 0 ? "You have no Comments!" : "All Comments"}
+        </h2>
         <ul className="text-sm text-slate-500">
           {comments.map((item, idx) => (
             <li className="border w-fit px-2 py-1 mb-1" key={idx}>

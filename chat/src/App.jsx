@@ -71,8 +71,8 @@ function App() {
 
   return (
     <>
-      <div className="w-[100%] h-[100vh] items-start justify-center flex gap-5 p-5">
-        <div className="flex-1 border p-5">
+      <div className="w-[100%] h-[100vh] items-start justify-center flex gap-5 p-5 overflow-auto flex-col-reverse sm:flex-row">
+        <div className="flex-1 border p-5 lg:pl-40">
           <Post
             allPost={allPost}
             onHeartClick={handleHeartClick}
@@ -81,7 +81,7 @@ function App() {
           />
         </div>
 
-        <div className="self-start border p-5">
+        <div className="self-start border p-5 lg:fixed lg:right-14 lg:top-16">
           <Form onSubmit={handleSubmit} />
         </div>
       </div>
